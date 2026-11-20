@@ -44,6 +44,10 @@ A slim icon rail on the right edge of the page:
 ### Languages
 English by default. **Polish** and **Russian** can be picked in the dock or in the toolbar popup.
 
+<img src="docs/popup.png" alt="Toolbar popup with language, tags, leave pause and cache settings" width="320">
+
+The toolbar popup has the same settings as the dock.
+
 ## Install
 
 The extension is not in a web store yet. Load it unpacked:
