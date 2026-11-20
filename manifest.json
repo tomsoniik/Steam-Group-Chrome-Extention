@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "short_name": "Group Tags",
+  "description": "__MSG_extDescription__",
+  "version": "1.3.1",
+  "default_locale": "en",
+  "minimum_chrome_version": "111",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://steamcommunity.com/id/*/groups*",
+        "https://steamcommunity.com/profiles/*/groups*",
+        "https://steamcommunity.com/id/*/friends*",
+        "https://steamcommunity.com/profiles/*/friends*",
+        "https://steamcommunity.com/search/groups*"
+      ],
+      "js": [
+        "src/shared/i18n.js",
+        "src/content/steam.js",
+        "src/content/icons.js",
+        "src/content/store.js",
+        "src/content/tags.js",
+        "src/content/join.js",
+        "src/content/leave.js",
+        "src/content/ui.js",
+        "src/content/dock.js",
+        "src/content/main.js"
+      ],
+      "css": ["src/content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "steam-group-tags@local",
+      "strict_min_version": "128.0"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Steam Group Tags</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="head">
+    <img src="../../icons/icon32.png" width="24" height="24" alt="">
+    <h1 data-i18n="extName">Steam Group Tags</h1>
+    <span class="ver" id="ver"></span>
+  </header>
+
+  <main>
+    <section class="block">
+      <span class="label" id="lang-label" data-i18n="langLabel"></span>
+      <div class="seg" role="radiogroup" aria-labelledby="lang-label" data-key="lang" id="lang-seg"></div>
+    </section>
+
+    <section class="row">
+      <div class="row-text">
+        <label for="tags" data-i18n="popupTags">Show group tags</label>
+        <p class="hint" data-i18n="popupTagsHint"></p>
+      </div>
+      <input type="checkbox" id="tags" class="switch" role="switch">
+    </section>
+
+    <section class="block">
+      <span class="label" id="delay-label" data-i18n="popupDelay"></span>
+      <div class="seg" role="radiogroup" aria-labelledby="delay-label" data-key="delay">
+        <button type="button" role="radio" data-v="800">0.8 s</button>
+        <button type="button" role="radio" data-v="1200">1.2 s</button>
+        <button type="button" role="radio" data-v="2000">2 s</button>
+        <button type="button" role="radio" data-v="3500">3.5 s</button>
+      </div>
+      <p class="hint" data-i18n="popupDelayHint"></p>
+    </section>
+
+    <section class="block">
+      <span class="label" id="ttl-label" data-i18n="popupTtl"></span>
+      <div class="seg" role="radiogroup" aria-labelledby="ttl-label" data-key="ttl">
+        <button type="button" role="radio" data-v="1">1</button>
+        <button type="button" role="radio" data-v="7">7</button>
+        <button type="button" role="radio" data-v="30">30</button>
+      </div>
+    </section>
+
+    <section class="block">
+      <span class="label" data-i18n="popupStorage"></span>
+      <div class="stat">
+        <span data-i18n="popupCache"></span>
+        <span class="num" id="cache-n">0</span>
+        <button type="button" class="link" id="clear-cache" data-i18n="popupClear"></button>
+      </div>
+      <div class="stat">
+        <span data-i18n="popupPins"></span>
+        <span class="num" id="pins-n">0</span>
+        <button type="button" class="link" id="clear-pins" data-i18n="popupClear"></button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <button type="button" class="btn" id="open" data-i18n="popupOpen"></button>
+  </footer>
+
+  <script src="../shared/i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
